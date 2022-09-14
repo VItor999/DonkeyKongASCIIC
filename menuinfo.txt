@@ -1,0 +1,45 @@
+
+
+ ##########################################################
+ #                                                        #
+ #                       Instruções:                      #
+ #   __________________________________________________   #
+ #  |    Nome  |          Descrição            |Desenho|  #
+ #  |--------------------------------------------------|  #
+ #  | Mário    | É o herói do jogo. Guie-o pelo|       |  #
+ #  |          | mapa fugindo dos barris até   |       |  #
+ #  |          | chegar à Princesa. Utilize "A"|       |  #
+ #  |          | para ir para a Esquerda, "D"  |  \Ô/  |  #
+ #  |          | direita e a barra de espaço   |  /H\  |  #
+ #  |          | para saltar. Quando em uma es-|       |  #
+ #  |          | cada utilize "W" para subir e |       |  #
+ #  |          | "S" para descer.              |       |  #
+ #  |--------------------------------------------------|  #
+ #  | Donkey   | É o vilão do jogo, atira      |       |  #
+ #  |    Kong  | barris para evitar que o Mário|  }o{  |  #
+ #  |          | salve a Princesa.             |  _H_  |  #
+ #  |--------------------------------------------------|  #
+ #  | Princesa | É o objetivo do jogo, salve-a |  \o/  |  #
+ #  |          | chegando até ela.             |  /=\  |  #
+ #  |--------------------------------------------------|  #
+ #  | Barril   | Arremesado por Donkey Kong, é |       |  #
+ #  |    Móvel | um obstáculo que dificulta o  |  /-\  |  #
+ #  |          | o caminho e pode lhe custar   |  \_/  |  #
+ #  |          | uma vida.                     |       |  #
+ #  |--------------------------------------------------|  #
+ #  | Escada   | Único caminho possível para  o|  |X|  |  #
+ #  |  Completa| Mário subir de plataforma     |  |-|  |  #
+ #  |          | Barris podem descer por elas. |  |-|  |  #
+ #  |--------------------------------------------------|  #
+ #  | Escada   | Inacessíveis ao Mário por     |  |X|  |  #
+ #  | Quebrada | estarem quebradas. Barris     |  |-|  |  #
+ #  |          | podem descer por elas.        |   -|  |  #
+ #  |--------------------------------------------------|  #
+ #  |Superfície| Onde o Mário pode caminhar    |  XXX  |  #
+ #  |          |  e barris rolam.              |  XXX  |  #
+ #  |--------------------------------------------------|  #
+ #  |  Rampas  | Onde o Mário pode caminhar    |   _.- |  #
+ #  |          | e barris rolam.               |_.-    |  #
+ #  |--------------------------------------------------|  #
+ #                                                        #
+ ##### PRESSIONE QUALQUER TECLA PARA VOLTAR AO MENU #######

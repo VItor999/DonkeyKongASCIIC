@@ -1,0 +1,97 @@
+Especificação das estruturas utilizadas:
+
+Struct tipo_fase:
+typedef struct tipo_fase
+{
+    char tipo;
+    int linha_inicial;
+    int coluna_inicial;
+    float velocidade;
+} TIPO_FASE;
+
+O struct TIPO_FASE serve para acessar informações de cada unidade do mapa. No programa,
+é lido um arquivo binário do qual é extraido todos os objetos do jogo, esses objetos são
+armazenados em um vetor do TIPO_FASE.
+Campos:
+char tipo: um caractere que expressa a qual das unidades o objeto corresponde
+int linha_inicial: linha inicial em que o objeto se encontra
+int coluna_inicial: coluna inicial em que o objeto se encontra
+float velocidade: velocidade do objeto, no programa, a velocidade pode ser 1,2,3,4 sendo que
+	esses valores foram #definidos como PDIR,PESQ,PBAI,PCIM como código interno.
+
+
+Struct controle:
+typedef struct controle
+{
+    char controle[Y_MAX_ESPELHO][X_MAX_ESPELHO];
+    char save[LINHAS_MAX][COLUNAS_MAX];
+} CONTROLE;
+
+O struct CONTROLE serve para guardar as localizações dos objetos de forma a facilitar seu acesso.
+	Com isso, pode-se acessar as posições e compará-las bem mais facilmente para
+	limitação do movimento, interferência da gravidade etc.
+Campos:
+char controle[Y_MAX_ESPELHO][X_MAX_ESPELHO]: matriz com dimensões #definidas que corresponde ao
+	espelho em tamanho real do jogo. Cada unidade é representada em mesma dimensão e posição
+	mas com seu tipo representado. Por exemplo, uma superfície é representada por "SSS"
+										       SSS
+char save[LINHAS_MAX][COLUNAS_MAX]: matriz com dimensões #definidas que corresponde à versão
+	simplificada do jogo. Uma única unidade de 23x20 com apenas a posição de origem da unidade.
+	Por exemplo, uma superfície é representada por 'S'. Esse campo é utilizado para salvar o
+	jogo e, consequentemente, para carregá-lo.
+
+
+Struct vetor:
+typedef struct vetor
+{
+    char objeto[4];
+} VETOR;
+
+
+O struct VETOR serve para simplificar a elaboração da tela_salva de modo que guarda
+	uma das dimensões básicas dos objetos do jogo.
+Campos: char objeto[4]: Vetor de caracteres que guarda uma das dimensões básicas do jogo.
+
+
+Struct jogo:
+typedef struct jogo
+{
+    TIPO_FASE vetor_objetos[MAX_OBJ]; 
+    TIPO_FASE mario;
+    TIPO_FASE barril_movel[MAX_BARRIL_M];     
+    CONTROLE espelho_fixo;   
+    int mario_x_origem;   
+    int mario_y_origem;
+    int coluna_donk;   
+    int linha_donk;
+    int score_atual; 
+    int score_max;    
+    int vidas;
+    int num_obj;  
+    int conta_barril;
+    VETOR tela_salva[46][21];
+} JOGO;
+
+O struct JOGO foi criado para que contesse todas as informações necessárias para a execução do
+	programa e para facilitar passagem de parâmetros. É o tipo principal
+Campos:
+TIPO_FASE vetor_objetos[MAX_OBJ]: Vetor de TIPO_FASE que contém todos os objetos
+TIPO_FASE mario: Variável separada para o Mário
+TIPO_FASE barril_movel[MAX_BARRIL_M]: Vetor separado para os barris móveis
+CONTROLE espelho_fixo: Espelho com todos os objetos do mapa
+int mario_x_origem: X inicial do Mário, para comparações necessárias (como as mortes)
+int mario_y_origem: Y inicial do Mário.
+int coluna_donk: X inicial do Donkey Kong, para jogar os barris
+int linha_donk: Y inicial do Donkey Kong, para jogar os barris
+int score_atual: O score atual
+int score_max: O score máximo
+int vidas: O número de vidas
+int num_obj: O número total de objetos, necessário para a impressão
+int conta_barril: O número total de barris, será o índice máximo do vetor barril_movel
+VETOR tela_salva[46][21]: Vetor com várias dimensões básicas dos objetos, serve para salvar a tela
+
+Para as intruções do jogo as mesmas se encontram disponívies no arquivo instruções ou na opção jogo do próprio programa
+Para selecionar uma opção no menu utilize as setas do teclado e  espaço ou enter para selecionar a opção.
+Para qualquer outra dúvida a respeito emails dos criadores:
+vcarvalho999@gmail.com
+pee.rodrigues360@gmail.com
